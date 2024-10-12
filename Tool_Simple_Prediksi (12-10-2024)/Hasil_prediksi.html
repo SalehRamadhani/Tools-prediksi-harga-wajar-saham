@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Tools Penentuan Harga Wajar Saham</title>
+        <link rel="stylesheet" href="warna_hasil.css" />
+    </head>
+    <body>
+        <div class="utama">
+            <a href="isi_data.html">
+                <button class="tombol1">
+                    Isi Ulang Data Saham
+                </button>
+            </a>
+        </div>
+        <div class="hasil_akhir">
+            <h1 class="jud_utama"> Hasil Analisis</h1>
+            <div class="area">
+                <h2 id="resis"></h2>
+                <h2 id="supp"></h2>
+            </div>
+            <div class="Buy">
+                <h2 id="SL"></h2>
+                <h2 id="TP"></h2>
+            </div>
+            <div class="buyUser">
+                <h2 class="userKata">Tentukan Stop Loss sesuai kebutuhan (%)</h2>
+                <h2 class="userKata">Tentukan Take Profit sesuai kebutuhan (%)</h2>
+                <input id="persenUserSL"  class="inputUser" type="number"
+                onkeypress="return hanyaAngka(event)" placeholder="SL%" min="0" max="100"
+                value="15">
+                <input id="persenUserTP"  class="inputUser" type="number"
+                onkeypress="return hanyaAngka(event)" placeholder="TP%" min="0" max="200"
+                value="35">
+                <h2 id="userSL"></h2>
+                <h2 id="userTP"></h2>
+            </div>
+            <div class="tabel_keputusan">
+                <h2 id="FV" class="hargaWajar"></h2>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+        <script src="papaparse.min.js"></script>
+        <script src="index.js"> </script>
+        <script src="ModelTensor.js"></script>
+    </body>
+</html>
